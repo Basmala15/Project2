@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* general styles */
 body{
     font-family: "Jost", sans-serif;
     overflow-x: hidden;
@@ -138,10 +139,10 @@ ul{
     opacity: 1;
     transform: scale(1,1);
 }
-.second-center-nav .page-item{
+.second-center-nav .collections-item{
     position: relative;
 }
-.second-center-nav .page-menu{
+.second-center-nav .collections-menu{
     position: absolute;
     z-index: 3;
     top: 50px;
@@ -158,26 +159,26 @@ ul{
     transform: scale(0);
     opacity: 0;
 }
-.second-center-nav .page-menu ul{
+.second-center-nav .collections-menu ul{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
 }
-.second-center-nav .page-menu ul li:first-of-type{
+.second-center-nav .collections-menu ul li:first-of-type{
     color :rgba(0, 0, 0, 0.7);
     padding-bottom: 8px;
     border-bottom: 1px dotted black;
 }
-.second-center-nav .page-menu li a{
+.second-center-nav .collections-menu li a{
     margin: 0 0 -5px -5px;
     transition: color 0.1s, transform 0.1s;
 }
-.second-center-nav .page-menu li a:hover{
+.second-center-nav .collections-menu li a:hover{
     color: #e83e8c;
     transform: scale(1.04);
 }
-.second-center-nav .page-item:hover .page-menu{
+.second-center-nav .collections-item:hover .collections-menu{
     visibility: visible;
     transform: scale(1);
     transform-origin: center;
@@ -237,8 +238,11 @@ ul{
 .main{
     width: 100%;
     height: 90vh;
-    background:#e83e8d25 url(../images/header.png) no-repeat scroll 100%/contain;
+    background:#e83e8c0d url(../images/main-bg.png) no-repeat scroll right;
+    background-size: 48% 125%;
     position: relative;
+    box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.4);
+
 }
 .main-content{
     width: 40%;
@@ -306,7 +310,6 @@ ul{
 .fashion-item .item-content{
     position: absolute;
     width: 100%;
-    /* height: 50%; */
     height: 23%;
     bottom: 0;
     transform: translateY(55px);
@@ -385,6 +388,7 @@ ul{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 25px;
 }
 .left i,
 .right i{
@@ -509,7 +513,7 @@ ul{
     z-index: 1;
 }
 .trending-item::after{
-    background: url("../images/man3.jpg");
+    background: url("../images/trending-bg-man.jpg");
     background-size: cover;
     transform: rotateY(180deg);
     transition: transform 1s;
@@ -524,7 +528,7 @@ ul{
 .news-container{
     width: 100%;
     padding: 30px 0;
-    background-color: rgba(0, 195, 255, 0.062);
+    background-color: #e83e8c0d;
     box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.4),  -1px -1px 2px 0px rgba(0, 0, 0, 0.4);
     position: relative;
 }
@@ -535,6 +539,7 @@ ul{
     align-items: center;
     justify-content: space-between;
     position: relative;
+    padding-top: 10px;
 }
 .testimonial-parent h2{
     color: black;
@@ -579,7 +584,7 @@ ul{
     text-align: center;
 }
 .like-item::after{
-    background-image: url("../images/shoes1.jpg");
+    background-image: url("../images/like-bg-heels.jpg");
     background-size: cover;
     background-position:center ;
     transform: translateY(-100%);
@@ -597,7 +602,7 @@ ul{
 }
 .news-item{
     width:calc(90%/3);
-    height: 600px;
+    height: 700px;
     padding: 30px 0;
 }
 .news-item .img{
